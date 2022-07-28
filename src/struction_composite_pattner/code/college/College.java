@@ -13,4 +13,6 @@ public abstract class College {
     public void remove(College college) {
         throw new UnsupportedOperationException();
     }
+
+    public abstract void print();
 }
