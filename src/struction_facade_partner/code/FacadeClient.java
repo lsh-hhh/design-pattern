@@ -1,6 +1,6 @@
-package stuction_facade_partner.code;
+package struction_facade_partner.code;
 
-import stuction_facade_partner.code.facade.VideoConversionFacade;
+import struction_facade_partner.code.facade.VideoConversionFacade;
 
 import java.io.File;
 

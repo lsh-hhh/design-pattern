@@ -1,6 +1,6 @@
-package stuction_facade_partner.code.facade;
+package struction_facade_partner.code.facade;
 
-import stuction_facade_partner.code.some_complex_media_library.*;
+import struction_facade_partner.code.some_complex_media_library.*;
 
 import java.io.File;
 
