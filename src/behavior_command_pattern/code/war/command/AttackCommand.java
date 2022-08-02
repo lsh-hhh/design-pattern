@@ -1,14 +1,15 @@
 package behavior_command_pattern.code.war.command;
 
-public class AttackCommand extends Command{
+import behavior_command_pattern.code.war.receiver.Soldier;
 
-    public AttackCommand(String content) {
-        super(content);
+public class AttackCommand implements Command{
+    private Soldier soldier;
+    public AttackCommand(Soldier soldier) {
+        this.soldier = soldier;
     }
 
     @Override
     public void execute() {
-
-        System.out.println("全军出击：" + content);
+        soldier.attack();
     }
 }
