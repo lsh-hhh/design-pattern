@@ -1,2 +1,2 @@
 # design-pattern
-design parttern demo
+design pattern demo
