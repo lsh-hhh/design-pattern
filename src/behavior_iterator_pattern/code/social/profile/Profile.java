@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Map;
 
 public class Profile {
-    private String name;
-    private String email;
-    private Map<String, List<String>> contacts = new HashMap<>();
+    private final String name;
+    private final String email;
+    private final Map<String, List<String>> contacts = new HashMap<>();
 
     public Profile(String email, String name, String... contacts) {
         this.email = email;

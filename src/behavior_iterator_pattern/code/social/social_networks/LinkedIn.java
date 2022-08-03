@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LinkedIn implements SocialNetwork {
-    private List<Profile> contacts;
+    private final List<Profile> contacts;
 
     public LinkedIn(List<Profile> cache) {
         if (cache != null) {
@@ -19,24 +19,20 @@ public class LinkedIn implements SocialNetwork {
     }
 
     public Profile requestContactInfoFromLinkedInAPI(String profileEmail) {
-        // Here would be a POST request to one of the LinkedIn API endpoints.
-        // Instead, we emulates long network connection, which you would expect
-        // in the real life...
+        // 模仿真实访问延迟
         simulateNetworkLatency();
         System.out.println("LinkedIn: Loading profile '" + profileEmail + "' over the network...");
 
-        // ...and return test data.
+        // 获取资料
         return findContact(profileEmail);
     }
 
     public List<String> requestRelatedContactsFromLinkedInAPI(String profileEmail, String contactType) {
-        // Here would be a POST request to one of the LinkedIn API endpoints.
-        // Instead, we emulates long network connection, which you would expect
-        // in the real life.
+        // 模仿真实访问延迟
         simulateNetworkLatency();
         System.out.println("LinkedIn: Loading '" + contactType + "' list of '" + profileEmail + "' over the network...");
 
-        // ...and return test data.
+        // 获取资料
         Profile profile = findContact(profileEmail);
         if (profile != null) {
             return profile.getContacts(contactType);

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Facebook  implements SocialNetwork {
-    private List<Profile> profiles;
+    private final List<Profile> profiles;
 
     public Facebook(List<Profile> cache) {
         if (cache != null) {
@@ -19,13 +19,11 @@ public class Facebook  implements SocialNetwork {
     }
 
     public Profile requestProfileFromFacebook(String profileEmail) {
-        // Here would be a POST request to one of the Facebook API endpoints.
-        // Instead, we emulates long network connection, which you would expect
-        // in the real life...
+        // 模仿真实访问延迟
         simulateNetworkLatency();
         System.out.println("Facebook: Loading profile '" + profileEmail + "' over the network...");
 
-        // ...and return test data.
+        // 获取资料
         return findProfile(profileEmail);
     }
 
@@ -34,7 +32,7 @@ public class Facebook  implements SocialNetwork {
         simulateNetworkLatency();
         System.out.println("Facebook: Loading '" + contactType + "' list of '" + profileEmail + "' over the network...");
 
-        // 获取数据
+        // 获取资料
         Profile profile = findProfile(profileEmail);
         if (profile != null) {
             return profile.getContacts(contactType);
