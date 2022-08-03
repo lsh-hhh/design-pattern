@@ -1,6 +1,6 @@
-package behavior_iterator_pattern.code.social_networks;
+package behavior_iterator_pattern.code.social.social_networks;
 
-import behavior_iterator_pattern.code.iterators.ProfileIterator;
+import behavior_iterator_pattern.code.social.iterators.ProfileIterator;
 
 public interface SocialNetwork {
 

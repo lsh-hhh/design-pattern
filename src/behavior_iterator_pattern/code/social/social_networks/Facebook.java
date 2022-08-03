@@ -1,8 +1,8 @@
-package behavior_iterator_pattern.code.social_networks;
+package behavior_iterator_pattern.code.social.social_networks;
 
-import behavior_iterator_pattern.code.iterators.FacebookIterator;
-import behavior_iterator_pattern.code.iterators.ProfileIterator;
-import behavior_iterator_pattern.code.profile.Profile;
+import behavior_iterator_pattern.code.social.iterators.FacebookIterator;
+import behavior_iterator_pattern.code.social.iterators.ProfileIterator;
+import behavior_iterator_pattern.code.social.profile.Profile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,13 +30,11 @@ public class Facebook  implements SocialNetwork {
     }
 
     public List<String> requestProfileFriendsFromFacebook(String profileEmail, String contactType) {
-        // Here would be a POST request to one of the Facebook API endpoints.
-        // Instead, we emulates long network connection, which you would expect
-        // in the real life...
+        // 模仿真实访问延迟
         simulateNetworkLatency();
         System.out.println("Facebook: Loading '" + contactType + "' list of '" + profileEmail + "' over the network...");
 
-        // ...and return test data.
+        // 获取数据
         Profile profile = findProfile(profileEmail);
         if (profile != null) {
             return profile.getContacts(contactType);

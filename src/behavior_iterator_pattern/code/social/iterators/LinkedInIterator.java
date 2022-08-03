@@ -1,7 +1,7 @@
-package behavior_iterator_pattern.code.iterators;
+package behavior_iterator_pattern.code.social.iterators;
 
-import behavior_iterator_pattern.code.profile.Profile;
-import behavior_iterator_pattern.code.social_networks.LinkedIn;
+import behavior_iterator_pattern.code.social.profile.Profile;
+import behavior_iterator_pattern.code.social.social_networks.LinkedIn;
 
 import java.util.ArrayList;
 import java.util.List;

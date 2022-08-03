@@ -1,16 +1,16 @@
-package behavior_iterator_pattern.code;
+package behavior_iterator_pattern.code.social;
 
-import behavior_iterator_pattern.code.profile.Profile;
-import behavior_iterator_pattern.code.social_networks.Facebook;
-import behavior_iterator_pattern.code.social_networks.LinkedIn;
-import behavior_iterator_pattern.code.social_networks.SocialNetwork;
-import behavior_iterator_pattern.code.spammer.SocialSpammer;
+import behavior_iterator_pattern.code.social.profile.Profile;
+import behavior_iterator_pattern.code.social.social_networks.Facebook;
+import behavior_iterator_pattern.code.social.social_networks.LinkedIn;
+import behavior_iterator_pattern.code.social.social_networks.SocialNetwork;
+import behavior_iterator_pattern.code.social.spammer.SocialSpammer;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class IteratorClient {
+public class IterateSocialClient {
 
     public static Scanner scanner = new Scanner(System.in);
 
@@ -23,8 +23,7 @@ public class IteratorClient {
         SocialNetwork network;
         if (choice.equals("2")) {
             network = new LinkedIn(createTestProfiles());
-        }
-        else {
+        } else {
             network = new Facebook(createTestProfiles());
         }
 

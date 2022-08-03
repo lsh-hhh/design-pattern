@@ -1,4 +1,4 @@
-package behavior_iterator_pattern.code.profile;
+package behavior_iterator_pattern.code.social.profile;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,8 +1,8 @@
-package behavior_iterator_pattern.code.spammer;
+package behavior_iterator_pattern.code.social.spammer;
 
-import behavior_iterator_pattern.code.iterators.ProfileIterator;
-import behavior_iterator_pattern.code.social_networks.SocialNetwork;
-import behavior_iterator_pattern.code.profile.Profile;
+import behavior_iterator_pattern.code.social.iterators.ProfileIterator;
+import behavior_iterator_pattern.code.social.social_networks.SocialNetwork;
+import behavior_iterator_pattern.code.social.profile.Profile;
 
 public class SocialSpammer {
 
