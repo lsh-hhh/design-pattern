@@ -1,2 +1,2 @@
-# design-pattner
-design parttner demo
+# design-pattern
+design parttern demo
