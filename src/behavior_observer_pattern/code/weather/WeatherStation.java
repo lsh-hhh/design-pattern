@@ -2,24 +2,14 @@ package behavior_observer_pattern.code.weather;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Observable;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class WeatherStation implements Weather{
+public class WeatherStation extends Observable implements Weather{
 
     private double[] temperature;
     private double humidity;
     private boolean rain;
-
-    private List<Observable> listeners = new ArrayList<>();
-
-    public void register(Observable listener) {
-        listeners.add(listener);
-    }
-
 
     @Override
     public double[] getTemperature() {
@@ -36,18 +26,29 @@ public class WeatherStation implements Weather{
         return rain;
     }
 
-    public void takeData() throws InterruptedException {
+    public void takeData() {
+        new Thread(() -> {
+            try {
+                extracted();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }).start();
+    }
+
+    private void extracted() throws InterruptedException {
         int count = 0;
         while (count < 10) {
-            TimeUnit.SECONDS.sleep(10);
-
+            System.out.println(" ******  " + (count + 1) + "  ****** ");
             temperature = Simulation.getSimulationTemp();
             humidity = Simulation.getSimulationHumidity();
             rain = new Random().nextDouble() > 0.5;
 
             count++;
             // 通知所有订阅者
-            listeners.forEach(Observable::notifyObservers);
+            notifyObservers(temperature, humidity, rain);
+
+            TimeUnit.SECONDS.sleep(5);
         }
     }
 
@@ -79,8 +80,8 @@ public class WeatherStation implements Weather{
         }
 
         public static double[] getSimulationTemp() {
-            Random random = new Random(10);
-            int i = random.nextInt();
+            Random random = new Random();
+            int i = random.nextInt(10);
 
             return new double[] {lowTemp[i], highTemp[i]};
         }
