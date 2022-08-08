@@ -34,7 +34,9 @@ public class FilterContext {
 
     public void doPostFilter(Request request) {
         // doPost 倒着来
-        filters.forEach(Filter::doPost);
+        for (int i = filters.size() - 1; i >= 0; i--) {
+            filters.get(i).doPost();
+        }
 
     }
 }
