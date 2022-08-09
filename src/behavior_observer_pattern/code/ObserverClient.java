@@ -1,5 +1,6 @@
 package behavior_observer_pattern.code;
 
+import behavior_observer_pattern.code.weather.IPhoneWeather;
 import behavior_observer_pattern.code.weather.MojiWeather;
 import behavior_observer_pattern.code.weather.WeatherStation;
 import behavior_observer_pattern.code.weather.XiaomiWeather;
@@ -13,6 +14,7 @@ public class ObserverClient {
         XiaomiWeather xiaomiWeather = new XiaomiWeather();
         weatherStation.register(mojiWeather);
         weatherStation.register(xiaomiWeather);
+        weatherStation.register(new IPhoneWeather());
 
         weatherStation.takeData();
 
