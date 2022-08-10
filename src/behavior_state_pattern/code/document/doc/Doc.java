@@ -5,6 +5,27 @@ import behavior_state_pattern.code.document.state.ModerationState;
 import behavior_state_pattern.code.document.state.PublishedState;
 import behavior_state_pattern.code.document.state.State;
 
+/**
+ * 状态：
+ * 	草稿：
+ * 		操作：
+ * 			提交：
+ * 				发表人是管理员： -> 已发布
+ * 				发表人是普通用户： -> 审核中
+ * 			撤回：
+ * 				草稿状态无法撤回
+ * 	审核中：
+ * 		操作：
+ * 			审核：
+ * 				管理员审核通过： -> 已发布
+ * 				管理员审核失败： -> 草稿
+ * 			驳回：
+ * 				管理员驳回： -> 草稿
+ * 	已发布：
+ * 		操作：
+ * 			撤回：
+ * 				管理员撤回： -> 草稿
+ */
 public class Doc {
 
     private State state;

@@ -22,7 +22,7 @@ public abstract class State {
     public abstract String revocation();
 
     /**
-     * 审核不通过
+     * 驳回
      *
      * @return
      */

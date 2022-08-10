@@ -20,24 +20,16 @@ public class DraftState extends State{
 
     @Override
     public String revocation() {
-        if (doc.isDrafting()) {
-            return "当前已是草稿状态，无需撤回";
-        }
-        doc.setState(this);
-        return "撤回成功";
+        return "当前已是草稿状态，无需撤回";
     }
 
     @Override
     public String overruled() {
-        if (doc.isDrafting()) {
-            return "当前已是草稿状态，驳回失败";
-        }
-        doc.setState(this);
-        return "驳回成功";
+        return "当前已是草稿状态，驳回失败";
     }
 
     @Override
     public String pass() {
-        return submit();
+        return "当前状态为草稿，无法审核";
     }
 }

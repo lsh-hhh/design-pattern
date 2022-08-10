@@ -20,7 +20,7 @@ public class ModerationState extends State{
     @Override
     public String overruled() {
         if (doc.getState() instanceof PublishedState) {
-            return "驳回失败，已经发表";
+            return "驳回失败，文章已经发表";
         }
         doc.setState(new DraftState(doc));
         return "驳回成功";
