@@ -1,8 +1,8 @@
-package create_abstract_factory_pattern.code.product;
+package create_abstract_factory_pattern.code.furniture.product;
 
-import create_abstract_factory_pattern.code.component.Chair;
-import create_abstract_factory_pattern.code.component.SeatCushion;
-import create_abstract_factory_pattern.code.factories.Factory;
+import create_abstract_factory_pattern.code.furniture.component.Chair;
+import create_abstract_factory_pattern.code.furniture.component.SeatCushion;
+import create_abstract_factory_pattern.code.furniture.factories.Factory;
 
 public class NormalProduct {
 

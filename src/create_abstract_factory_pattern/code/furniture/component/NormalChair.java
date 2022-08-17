@@ -1,4 +1,4 @@
-package create_abstract_factory_pattern.code.component;
+package create_abstract_factory_pattern.code.furniture.component;
 
 public class NormalChair implements Chair{
 
