@@ -4,13 +4,13 @@ import create_abstract_factory_pattern.code.component.Chair;
 import create_abstract_factory_pattern.code.component.SeatCushion;
 import create_abstract_factory_pattern.code.factories.Factory;
 
-public class FinishedProduct {
+public class NormalProduct {
 
     private final Chair chair;
 
     private final SeatCushion seatCushion;
 
-    public FinishedProduct(Factory factory) {
+    public NormalProduct(Factory factory) {
         chair = factory.buildChair();
         seatCushion = factory.buildSeatCushion();
     }
