@@ -7,7 +7,7 @@ import create_builder_pattern.code.car.cars.components.GPSNavigator;
 import create_builder_pattern.code.car.cars.components.Transmission;
 import create_builder_pattern.code.car.cars.components.TripComputer;
 
-public class CarBuilder implements Builder{
+public class CarBuilder implements Builder {
     private CarType type;
     private int seats;
     private Engine engine;

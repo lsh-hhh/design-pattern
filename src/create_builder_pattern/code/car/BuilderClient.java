@@ -22,5 +22,14 @@ public class BuilderClient {
         director.constructSportsCar(manualBuilder);
         Manual carManual = manualBuilder.getResult();
         System.out.println("\nCar manual built:\n" + carManual.print());
+
+        director.constructCityCar(builder);
+        Car result = builder.getResult();
+        System.out.println("Car built:\n" + result.getCarType());
+
+        director.constructCityCar(manualBuilder);
+        Manual manual = manualBuilder.getResult();
+        System.out.println("\nCar manual built:\n" + manual.print());
+
     }
 }
